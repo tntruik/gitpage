@@ -1,0 +1,86 @@
+/* 请把所有 CSS 写入本文件 */
+/* 颜色列表：#0D0D0D #c6c9ce #4A4A4A */
+/* 此处的class只是为了更好改色 */.d{color:#0D0D0D}.c{color:#c6c9ce}.a{color:#4a4a4a}
+body {
+  color:#777777;
+  /*background: url(https://www.wjghj.cn/images/5/51/Wiki-background.png) 0 0 / 100% fixed;*/
+  background:#111111;
+}
+
+content {
+  position:absolute;
+  height:85%;
+  width:90%;
+  left:5%;
+  top:50px;
+  padding:6px;
+  display:flex;
+  justify-content:space-between;
+  border-radius:5px;
+  background:#151515;
+  box-shadow:5px 5px 4px 0px #101010;
+}
+
+footer {
+  width:95%;
+  margin:100px 2.5% 0px 2.5%;
+  padding:5px;
+  position:absolute;
+  bottom:1px;
+  border-radius:10px;
+  background:#171717;
+}
+
+footer-l {
+  width: 50%;
+	text-align:left;
+	color:#c6c9ce;
+	line-height:24px;
+	display:inline-block;
+}
+
+footer-r {
+	text-align:right;
+	color:#c6c9ce;
+	float:right;
+	display:inline-block;
+}
+
+friendlink {
+  color:transparent
+}
+
+a {
+  color:1px;
+	text-decoration: none;
+}
+
+.avatar {
+  width:40px;
+  height:40px;
+  border:solid 2px #c6c9ce;
+  border-radius:50%;
+  float:left;
+  transition:transform 300ms;
+  -webkit-transition:transform 300ms;
+}
+
+.avatar:hover {
+  transform:rotate(10deg);
+}
+
+/*fuc:<heimu style="--heimu:{color}">{text}</heimu>*/
+heimu {
+  transition: all .3s;
+  background: var(--heimu);
+  color: var(--heimu);
+}
+heimu:not(:hover) > *,
+heimu:not(:hover) a,
+heimu:not(:hover) span {/*同时隐藏带自颜色的文字*/
+  background: var(--heimu) !important;
+  color: var(--heimu) !important;
+}
+heimu:hover {
+  background: transparent;/*鼠标移入后文字背景透明*/
+}
