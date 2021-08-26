@@ -1,10 +1,24 @@
 /* 请把所有 CSS 写入本文件 */
-/* 颜色列表：#0D0D0D #c6c9ce #4A4A4A */
 /* 此处的class只是为了更好改色 */.d{color:#0D0D0D}.c{color:#c6c9ce}.a{color:#4a4a4a}
 body {
   color:#777777;
   /*background: url(https://www.wjghj.cn/images/5/51/Wiki-background.png) 0 0 / 100% fixed;*/
   background:#111111;
+}
+
+header {
+}
+
+menu {
+  position:relative;
+  float:right;
+  top:-10px;
+  line-height:18px;
+  z-index:1;/* 避免 content 覆盖 menu */
+  border-radius:3px;
+  background:#4a4a4a;
+  padding:5px;
+  height:50%;
 }
 
 content {
@@ -14,14 +28,16 @@ content {
   left:5%;
   top:50px;
   padding:6px;
-  display:flex;
+  /*display:flex;*/
   justify-content:space-between;
   border-radius:5px;
+  color:#c6c9ce;
   background:#151515;
   box-shadow:5px 5px 4px 0px #101010;
+  overflow:scroll;
 }
 
-footer {
+footer,.footer {
   width:95%;
   margin:100px 2.5% 0px 2.5%;
   padding:5px;
@@ -46,14 +62,17 @@ footer-r {
 	display:inline-block;
 }
 
-friendlink {
-  color:transparent
+h2 {
+  background:linear-gradient(90deg,#979797,rgba(255,255,255,0));
+  background-position:0 22px;
+  background-repeat:repeat-x;
+  background-size:100% 8px;
+  text-shadow:2px 0px 0px white;
+  font-family:Audiowide,Arial,Tahoma,"title-font","Microsoft YaHei","Microsoft JhengHei",微軟正黑體,sans-serif;
 }
 
-a {
-  color:1px;
-	text-decoration: none;
-}
+a {color:#c6c9ce;text-decoration: none}
+code {border-radius:2px;padding:1px 4px;/*往后是与pre共用的样式*/border:1px solid #4a4a4a}
 
 .avatar {
   width:40px;
@@ -64,23 +83,23 @@ a {
   transition:transform 300ms;
   -webkit-transition:transform 300ms;
 }
-
 .avatar:hover {
   transform:rotate(10deg);
 }
 
-/*fuc:<heimu style="--heimu:{color}">{text}</heimu>*/
-heimu {
-  transition: all .3s;
-  background: var(--heimu);
-  color: var(--heimu);
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #111111;
 }
-heimu:not(:hover) > *,
-heimu:not(:hover) a,
-heimu:not(:hover) span {/*同时隐藏带自颜色的文字*/
-  background: var(--heimu) !important;
-  color: var(--heimu) !important;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #111111;
 }
-heimu:hover {
-  background: transparent;/*鼠标移入后文字背景透明*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #c6c9ce6e;
 }
